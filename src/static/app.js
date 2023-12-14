@@ -4,11 +4,13 @@ window.addEventListener("DOMContentLoaded", setup);
 
 // If time allows, make UI components interactive (e.g. hovering over possible clickable items)
 
+let productData
+
 async function setup() {
 	// START HERE
 	// PRODUCTS CAN BE FETCHED USING: GET /products
 
-	// thx google for fetch. rusty on this
+	//fetch product data
 	fetch("./products")
 	.then(response => {
 		if(response.ok) {
@@ -16,8 +18,23 @@ async function setup() {
 		}
 	}).then(data => {
 		if(data) {
-			const productData = data
-			console.log(productData)
+			productData = data
+			// Sort by price low to high
+			const sortedProductData = data.sort((a, b) => a.price - b.price);
+			console.log(sortedProductData);
 		}
 	}).catch(err => console.error(err))
 }
+
+// const Card = (...productData) => {
+// 	return (
+// 	  <article className="card">
+// 		<img src={url} className="card-img"/>
+// 		<div className="card-content">
+// 		<h1 className="card-name">{name}</h1>
+// 		<h2 className="card-breed-age">{breed} • {age} {age > 1 ? "years" : "year"}</h2>
+// 		<p>{description}</p>
+// 		</div>
+// 	  </article>
+// 	)
+//   }

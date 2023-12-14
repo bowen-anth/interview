@@ -14,8 +14,24 @@ body {
     background-color: #4EB6FF;
 }
 
+.nav > ul {
+    list-style-type: none;
+    align-self: center; 
+    
+}
+
+
+
 @media screen and (max-width: 430px) {
+
     .nav {
-        margin: 2rem;
+        padding: 0.45rem 1rem;
+    }
+
+    #search-product-input {
+        width: 90%;
+        margin: 1.5rem;
+        padding: 0.75rem;
+        text-align: left;
     }
 }
