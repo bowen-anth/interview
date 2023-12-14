@@ -4,11 +4,18 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Mina, serif;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
+    background-color: #4EB6FF;
 }
 
 @media screen and (max-width: 430px) {
-    
+    .nav {
+        margin: 2rem;
+    }
 }
