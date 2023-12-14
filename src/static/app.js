@@ -21,8 +21,10 @@ async function setup() {
 		if(data) {
 			productData = data
 			// Sort by price low to high
-			sortedProductData = data.sort((a, b) => a.price - b.price);
-			console.log(sortedProductData);
+			sortedProductData = data.sort((a, b) => a.price - b.price)
+			console.log(sortedProductData)
+			// Call renderProducts function with sorted data
+			renderProducts(sortedProductData)
 		}
 	}).catch(err => console.error(err))
 }
@@ -33,17 +35,14 @@ function renderProducts(products) {
 
     products.forEach(product => {
         const productHTML = `
-            <div class="product">
-                <h2>${product.title}</h2>
-                <p>${product.description}</p>
-                <p>Price: $${product.price}</p>
-                <img src="${product.images[0]?.src}" alt="${product.title}">
+            <div class="product-div">
+                <h2 class="product-title">${product.title}</h2>
+                <p class="product-description-paragraph">${product.description}</p>
+                <p class="product-price-paragraph">Price: $${product.price}</p>
+                <img src="${product.images[0]?.src}" alt="${product.title}" class="product-image">
             </div>
         `
 
         productsContainer.innerHTML += productHTML
     })
 }
-
-// Call renderProducts function with sorted data
-renderProducts(sortedProductData)

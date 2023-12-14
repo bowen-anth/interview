@@ -20,6 +20,9 @@ body {
     
 }
 
+.product-image {
+    width: 25%;
+}
 
 
 @media screen and (max-width: 430px) {
