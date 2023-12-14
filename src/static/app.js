@@ -12,11 +12,12 @@ async function setup() {
 	fetch("./products")
 	.then(response => {
 		if(response.ok) {
-			return response.json();
+			return response.json()
 		}
 	}).then(data => {
 		if(data) {
-			console.log(data);
+			const productData = data
+			console.log(productData)
 		}
-	}).catch(err => console.error(err));
+	}).catch(err => console.error(err))
 }
