@@ -21,18 +21,38 @@ body {
 }
 
 .product-image {
-    width: 50%;
+    width: 100%;
+    max-width: 200px;
 }
+
+
 
 .product-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 70%;
+    margin: auto;
 }
 
 .product-item-container {
-    border: 1px solid #ccc;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
+}
+
+#search-product-input {
+    width: 90%;
+    margin: 1.5rem;
+    margin-bottom: 0;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.h1-product-class {
+    margin: 1rem;
 }
 
 
@@ -55,7 +75,6 @@ body {
     }
     
     .product-item-container {
-        border: 1px solid red;
         padding: 10px;
     }
 }

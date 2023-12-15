@@ -46,7 +46,7 @@ function renderProducts(products) {
             <div class="product-item-container">
 				<img src="${product.images[0]?.src}" alt="${product.title}" class="product-image">
                 <h2 class="product-title">${product.title}</h2>
-                <p class="product-price-paragraph">Price: $${formattedPrice}</p>
+                <p class="product-price-paragraph">$${formattedPrice}</p>
             </div>
         `
 
