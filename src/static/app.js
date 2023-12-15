@@ -22,7 +22,7 @@ async function setup() {
 			productData = data
 			// Sort by price low to high
 			sortedProductData = data.sort((a, b) => a.price - b.price)
-			console.log(sortedProductData)
+			// console.log(sortedProductData)
 			// Call renderProducts function with sorted data
 			renderProducts(sortedProductData)
 		}
