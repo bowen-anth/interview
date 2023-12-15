@@ -36,10 +36,9 @@ function renderProducts(products) {
     products.forEach(product => {
         const productHTML = `
             <div class="product-item-container">
+				<img src="${product.images[0]?.src}" alt="${product.title}" class="product-image">
                 <h2 class="product-title">${product.title}</h2>
-                <p class="product-description-paragraph">${product.description}</p>
                 <p class="product-price-paragraph">Price: $${product.price}</p>
-                <img src="${product.images[0]?.src}" alt="${product.title}" class="product-image">
             </div>
         `
 
