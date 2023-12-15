@@ -12,6 +12,8 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: #4EB6FF;
+    padding: 0.5rem;
+    height: 2.5rem;
 }
 
 .nav > ul {
@@ -25,8 +27,6 @@ body {
     max-width: 200px;
 }
 
-
-
 .product-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
@@ -35,15 +35,19 @@ body {
     padding: 0;
     width: 70%;
     margin: auto;
+    gap: 4rem;
 }
 
 .product-item-container {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    gap: 2rem;
 }
 
+/* font resets on inputs have to set font */
 #search-product-input {
+    font-family: Mina, serif;
     width: 90%;
     margin: 1.5rem;
     margin-bottom: 0;
@@ -59,7 +63,9 @@ body {
 @media screen and (max-width: 430px) {
 
     .nav {
-        padding: 0.45rem 1rem;
+        padding: 0.45rem 0.75rem;
+        height: 3rem;
+        font-size: 1.25rem;
     }
 
     #search-product-input {
@@ -71,10 +77,9 @@ body {
     .product-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
-        gap: 10px;
+        gap: 1rem;
     }
-    
     .product-item-container {
-        padding: 10px;
+        padding: 2rem;
     }
 }
