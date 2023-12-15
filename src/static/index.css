@@ -38,10 +38,6 @@ body {
     gap: 4rem;
 }
 
-.product-image, .product-item-container {
-    transition: transform 0.5s ease-in-out;
-}
-
 .product-item-container {
     align-items: center;
     justify-content: center;
@@ -64,11 +60,15 @@ body {
 }
 
 /* Hover effects */
+.product-image, 
+.product-item-container {
+    transition: transform 0.4s ease-in-out;
+}
+
 .product-item-container:hover,
 .product-image:hover {
     transform: scale(1.05);
 }
-
 
 @media screen and (max-width: 430px) {
 
