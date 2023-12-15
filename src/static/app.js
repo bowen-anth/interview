@@ -29,16 +29,24 @@ async function setup() {
 	}).catch(err => console.error(err))
 }
 
+// convert price to dollars.cents X.yy
+function formatPrice(price) {
+    const dollars = Math.floor(price / 100);
+    const cents = price % 100;
+    return `${dollars}.${cents.toString().padStart(2, '0')}`;
+}
+
 // Rendering the products as HTML
 function renderProducts(products) {
     productContainer.innerHTML = ''
 
     products.forEach(product => {
+		const formattedPrice = formatPrice(product.price)
         const productHTML = `
             <div class="product-item-container">
 				<img src="${product.images[0]?.src}" alt="${product.title}" class="product-image">
                 <h2 class="product-title">${product.title}</h2>
-                <p class="product-price-paragraph">Price: $${product.price}</p>
+                <p class="product-price-paragraph">Price: $${formattedPrice}</p>
             </div>
         `
 

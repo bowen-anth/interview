@@ -55,7 +55,7 @@ body {
     }
     
     .product-item-container {
-        border: 1px solid #ccc;
+        border: 1px solid red;
         padding: 10px;
     }
 }
