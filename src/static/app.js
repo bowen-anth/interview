@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", setup);
 
 // If time allows, make UI components interactive (e.g. hovering over possible clickable items)
 
-const productsContainer = document.getElementById('products-container');
+const productContainer = document.querySelector('.product-container');
 let sortedProductData
 
 async function setup() {
@@ -31,11 +31,11 @@ async function setup() {
 
 // Rendering the products as HTML
 function renderProducts(products) {
-    productsContainer.innerHTML = ''
+    productContainer.innerHTML = ''
 
     products.forEach(product => {
         const productHTML = `
-            <div class="product-div">
+            <div class="product-item-container">
                 <h2 class="product-title">${product.title}</h2>
                 <p class="product-description-paragraph">${product.description}</p>
                 <p class="product-price-paragraph">Price: $${product.price}</p>
@@ -43,6 +43,6 @@ function renderProducts(products) {
             </div>
         `
 
-        productsContainer.innerHTML += productHTML
+        productContainer.innerHTML += productHTML
     })
 }
